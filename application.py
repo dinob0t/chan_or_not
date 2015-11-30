@@ -4,8 +4,8 @@ from flask.ext.restful import Api, Resource, reqparse, fields, marshal
 from flask.ext.httpauth import HTTPBasicAuth
 import json
 
-app = Flask(__name__, static_url_path="")
-api = Api(app)
+application = Flask(__name__, static_url_path="")
+api = Api(application)
 auth = HTTPBasicAuth()
 credentials = 'creds.json'
 creds_data = {}
@@ -127,4 +127,4 @@ api.add_resource(IsChanAPI, '/chanornot/api/v1.0/ischan/<url_in>', endpoint='url
 
 if __name__ == '__main__':
 	init_creds()
-	app.run(debug=True)
+	application.run(debug=True)
