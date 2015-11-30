@@ -1,0 +1,3 @@
+Flask==0.10.1
+Flask-restful==0.3.4
+Flask-httpauth==2.7.0
